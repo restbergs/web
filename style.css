@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+    background: rgb(26,13,235);
+    background: linear-gradient(90deg, rgba(26,13,235,1) 7%, rgba(14,194,50,1) 46%, rgba(0,212,255,1) 100%);
+}
+
+iframe {
+  width: 700px;
+  height: 704px;
+  display: block;
+  margin: 0 auto;
+  /* position: relative;
+  top: 50px; */
+}
+h1{
+    text-align: center;
+}
