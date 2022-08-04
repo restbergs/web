@@ -8,10 +8,13 @@ body {
 }
 
 iframe {
-  width: 700px;
-  height: 704px;
+  width: 400px;
+  height: 404px;
   display: block;
   margin: 0 auto;
+  bordeR:none;
+  border-radius: 150px;
+  
   /* position: relative;
   top: 50px; */
 }

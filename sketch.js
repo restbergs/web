@@ -7,7 +7,9 @@ let x,
   y,
   z = 0;
 let texturita = 0
-let vel = 0.03 ; 
+let vel = 0.03;
+let pg;
+
 function preload() { //si lo cargo aca con preload, cambia la realcion de scala no se porque.
 
 
@@ -16,38 +18,39 @@ function preload() { //si lo cargo aca con preload, cambia la realcion de scala 
 }
 
 function setup() {
-  createCanvas(400, 400, WEBGL);
+  createCanvas(800, 800);
   //bichito = loadModel("bichito.obj");
+  pg = createGraphics(800, 800, WEBGL);
 
 }
 
 function draw() {
-  background(255,255,0);
-  ambientLight(200);
+ 
 
-  //normalMaterial();
-  noStroke();
-  specularMaterial(200);
-  directionalLight(255, 255, 255, 0, 100, 100);
-
-   //rotateX(angle);
-
-
-  rotateZ (3.14+angle*1.9);
-
-
-  translate(0, 0, 200) //mov i
-
-  rotateY(3.14+sin(angle*1));
-  rotateX(0);
-  scale(1);
-  texture(texturita)
-  model(bichito);
-
+  // pg.ambientLight(200);
+  // //normalMaterial();
+  // pg.noStroke();
+  // pg.specularMaterial(200);
+  // pg.directionalLight(255, 255, 255, 0, 100, 100);
+  //rotateX(angle);
+  pg.push();
+  pg.background(150);
+  pg.rotateZ(3.14 + angle * 1.9);
+ pg.translate(0, 0, 400) //mov i
+  pg.rotateY(3.14 + sin(angle * 1));
+  pg.rotateX(0);
+  pg.scale(1);
+  pg.box(100);
+  pg.texture(texturita)
+  pg.model(bichito);
+  angle += vel;
+  pg.pop();
+ 
+  image(pg, 0, 0)
   //  model(viejos[0]);
   //box( 100,100,100)
-  angle += vel;
-//console.log(mouseX)
+
+  //console.log(mouseX)
 }
 
 // function windowResized() {
@@ -55,11 +58,11 @@ function draw() {
 // }
 
 function keyPressed() {
-if (key == 'a'){
-vel = 0;
-}
-if (key == 's'){
-  vel = 0.8;
+  if (key == 'a') {
+    vel = 0;
+  }
+  if (key == 's') {
+    vel = 0.8;
   }
 
 }
