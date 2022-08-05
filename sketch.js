@@ -16,7 +16,7 @@ function preload() { //si lo cargo aca con preload, cambia la realcion de scala 
 }
 
 function setup() {
-  createCanvas(400, 400, WEBGL);
+  createCanvas(500, 500, WEBGL);
   //bichito = loadModel("bichito.obj");
 
 }
