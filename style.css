@@ -10,15 +10,17 @@ body {
     rgba(14, 194, 50, 1) 46%,
     rgba(0, 212, 255, 1) 100%
   ); */
+ 
+  
+}
+header{
+
   background-image: url(./assets/img/fondo-foto.jpg);
   background-repeat: no-repeat;
   height:100vh;
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
   background-position: center center;
   background-size: cover;
-}
-header{
-  height:100vh;
 }
 .pantalla-2{
   background-color: white;
@@ -31,7 +33,7 @@ height:100vh;
 iframe {
   width: 500px;
   height: 504px;
-  display: block;
+  display: inline-block;
   margin: 0 auto;
 
   /* position: relative;
@@ -44,22 +46,23 @@ nav{
 margin-top:1em;
 }
 .menu__iconos-redes {
-  
   background-color: white;
   width: 40%;
   padding:0.2em;
   margin:auto;
   border-radius:30px;
-  font-size:0.7em;
+  font-size:1em;
   font-weight: bold;
+  opacity: 80%;
 }
 .menu-horizontal{
   background-color: white;
-  width: 40%;
+  width: 50%;
   padding:0.2em;
   margin:2em auto;
   border-radius:30px;
-  font-size:0.7em;
+  font-size:1em;
+  opacity: 80%;
 }
 ul {
   text-align: center;
@@ -68,12 +71,18 @@ li {
   display: inline-block;
   margin: 10px;
 }
+a {
+  text-decoration:none;
+}
 
 .banner {
   text-align: center;
   margin: auto;
   display: block;
+  
+  
 }
-img {
+header img {
   width:80%;
+  margin-top:4em;
 }
