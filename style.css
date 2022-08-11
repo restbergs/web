@@ -22,10 +22,13 @@ header{
 h1 {
   text-align: center;
 }
+
 nav{
+width:100%;  
 margin-top:1em;
 border: solid var(--border-fantasma);
 }
+
 ul {
   text-align: center;
 }
@@ -38,7 +41,8 @@ li {
 
 .menu__iconos-redes {
   background-color: white;
-  width: 40%;
+  /* width:40%; 1920 x 1080 */
+  width: 50%;
   padding:0.2em;
   margin:auto;
   border-radius:30px;
@@ -53,11 +57,12 @@ text-decoration:none;
 
 .menu-horizontal{
   background-color: rgb(255, 0, 0);
-  width: 50%;
+  /* width: 50%; 1920 x 1080 */
+  width: 100%; 
   padding:0.2em;
   margin:2em auto;
   border-radius:0px;
-  font-size:1.3em;
+  font-size:1.3rem;
   opacity: 100%;
   font-weight: bolder;
 }
@@ -75,16 +80,14 @@ text-decoration:none;
   margin: auto;
   display: block;
 }
-header img {
+
+.banner img {
   width:80%;
   margin-top:4em;
 }
 
 
-.pantalla-2{
-  background-color: white;
-  height:100vh;
-}
+
 .pantalla-3{
 *background-color:#ffff00;
 background-color:#176f92;
