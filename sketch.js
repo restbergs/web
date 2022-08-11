@@ -8,6 +8,10 @@ let x,
   z = 0;
 let texturita = 0
 let vel = 0.03 ; 
+let iluminacion = 0 ; 
+let camara, estado, contador, umbral, max, posX, posY, posZ;
+let estadoClick = 0;
+let movScala = 1; 
 function preload() { //si lo cargo aca con preload, cambia la realcion de scala no se porque.
 
 
@@ -16,31 +20,40 @@ function preload() { //si lo cargo aca con preload, cambia la realcion de scala 
 }
 
 function setup() {
-  createCanvas(500, 500, WEBGL);
+  createCanvas(windowWidth, windowHeight, WEBGL);
   //bichito = loadModel("bichito.obj");
 
 }
 
 function draw() {
   background(255,255,0);
-  ambientLight(200);
+  ambientLight(200,200,200);
 
   //normalMaterial();
   noStroke();
   specularMaterial(200);
-  directionalLight(255, 255, 255, 0, 100, 100);
-
-   //rotateX(angle);
-
+ 
+  //orbitControl();
+   //rotateZ (3.14);
+   //rotateY(3.14);
 
   rotateZ (3.14+angle*1.9);
+  rotateY(3.14+angle*1.2);
+  //rotateX(0);
+ 
+  
+  // translate(0, 0, 200) //mov i
 
+  
+  
 
-  translate(0, 0, 200) //mov i
-
-  rotateY(3.14+sin(angle*1));
-  rotateX(0);
-  scale(1);
+  
+  //console.log ( movScala);
+  //constrain ( movScala, )
+ 
+ // movScala = constrain(mouseX/500, 0.1, 0.7);
+ movScala= 3; 
+ scale(movScala);
   texture(texturita)
   model(bichito);
 
@@ -50,16 +63,42 @@ function draw() {
 //console.log(mouseX)
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
 // function windowResized() {
 //   resizecanvas(windowWidth, windowHeight);
 // }
 
 function keyPressed() {
 if (key == 'a'){
-vel = 0;
+ console.log ( "HOLAAA!")
+  vel= 0 ;
+
 }
+
 if (key == 's'){
   vel = 0.8;
   }
 
 }
+
+function mouseClicked(){
+   estadoClick ++;
+   
+
+   if ( estadoClick == 1){
+         vel=0;
+   }
+   else if (estadoClick == 2){
+   // vel=random(0.05, 0.2);
+   vel = map ( mouseX, 0, width, 0.02, 0.1);
+   }
+   
+   if (estadoClick == 3){
+    vel=0;
+    estadoClick = 1;
+   }
+   console.log (estadoClick)
+}
+

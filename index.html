@@ -27,46 +27,36 @@
           <li><a href="">YOUTUBE</a></li>
         </ul>
         <ul class="menu-horizontal">
-          <li>HOME</li>
-          <li>CONTACTO</li>
+          <li>PAGINA EN CONSTRUCCION PODES INGRESAR A <a a href="https://fabricamarciana.wordpress.com/" target="_blank">FABRICA MARCIANA, SISI ES UN WORDPRESS</a> O PODES HACER <a a href="#pantalla-3d" data-ancla="pantalla-3d">CLICK ACA</a></li>
+          <!-- <li>CONTACTO</li>
           <li>TALLERES</li>
           <li>HAGALO USTED MISMO</li>
           <li>RECURSOS</li>
           <li>BIO</li>
-          <li>GRAFICA</li>
+          <li>GRAFICA</li> -->
         </ul>
       </nav>
     </header>
-    <section class="pantalla-2"></section>
-    <section class="pantalla-3">
-      <iframe src="./3d.html" frameborder="0" scolling="no"></iframe>
-      <iframe src="" frameborder="0" scolling="no"></iframe>
-         
-    </section>
-     
-               <article class="">
-
-</article>
-<article>
-
-</article>
-<article>
-
-</article>
-      <section>
-
-
-      
-
-      
-
-
-     
     
+    <section class="pantalla-3" id="pantalla-3d">
+      <iframe src="./3d.html" frameborder="0" scrolling="no" allowfullscreen></iframe>
+     <button class="pantalla3-boton"> <a href="">VOLVER</a></button>
+      <!-- <iframe src="./3d.html" frameborder="0"scrolling="no" allowfullscreen></iframe>
+      <iframe src="./3d.html" frameborder="0"scrolling="no" allowfullscreen></iframe>
+      <iframe src="./3d.html" frameborder="0"scrolling="no" allowfullscreen></iframe>
+      <iframe src="./3d.html" frameborder="0"scrolling="no" allowfullscreen></iframe>
+      <iframe src="./3d.html" frameborder="0"scrolling="no" allowfullscreen></iframe> -->
+     
 
+      
+  
+</section>
     <footer></footer>
 
 <!-- SCRIPTS BOOTSTRAP -->
+
+
+
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -82,5 +72,16 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script>
+      // A $( document ).ready() block.
+      $(document).ready(function () {
+        $(".top a").click(function (e) {
+          e.preventDefault();
+          var offset = $($(this).attr("href")).offset().top;
+          $("html, body").animate({ scrollTop: offset }, 600);
+          return false;
+        });
+      });
+      </script>
   </body>
 </html>
