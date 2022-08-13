@@ -5,7 +5,7 @@
 
 :root {
   --color-hover: #4df14d;
-  --border-fantasma: rgb(234, 127, 127);
+  --border-fantasma: rgba(234, 127, 127, 0);
   --icono-size: 50px;
   --color-menu-redes: #ffffff;
   --color-iconos-redes: #5d3ece;
@@ -17,31 +17,51 @@
 }
 
 body {
-  background-color: #ffff00;
-}
-header{
   background-color: #5d3ece;
-  height:3vh;
-  opacity:100%;
-
+}
+header {
+  *background-color: #09097a;
+  width:100%;
+  height: 3vh;
+  position:fixed;
 }
 
-header h1{
+header h1 {
   font-size: 20px;
   font-weight: bold;
-  color:white;
-  margin-left:20px;
-
+  color: white;
+  margin-left: 20px;
+  padding:10px;
 }
 .pagina-intro {
-  background-image: url(./assets/img/fondo-foto.jpg);
+  /* background-image: url(./assets/img/fondo-foto.jpg);
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
+  background-repeat: no-repeat; */
+
+  /* background-color:#09097a; */
+
+  background: rgb(215, 206, 247);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(215, 206, 247, 1) 0%,
+    rgba(92, 62, 205, 1) 46%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(215, 206, 247, 1) 0%,
+    rgba(92, 62, 205, 1) 46%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(215, 206, 247, 1) 0%,
+    rgba(92, 62, 205, 1) 46%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d7cef7",endColorstr="#5c3ecd",GradientType=1);
+
+  height: 97vh;
   width: 100%;
-  
 }
 .pageContainer {
   display: flex;
@@ -49,7 +69,7 @@ header h1{
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  height: 100vh;
+  min-height: 97vh;
 }
 
 .banner {
@@ -60,13 +80,13 @@ header h1{
 }
 
 .banner img {
-  width: 50%;
+  width: 25%;
 }
 
 .menu_redes_aviso {
   border: solid var(--border-fantasma);
   width: 100%;
-  min-height: 30vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
 
@@ -105,18 +125,19 @@ li {
 
 .menu-aviso {
   background-color: #78eaff;
-  width: 50%;
-  border-radius: 20px;
+  width: 40%;
+  min-height:5vh;
+  border-radius: 30px;
   font-size: 1.3em;
   opacity: 100%;
   font-weight: bolder;
   text-align: center;
 }
-.menu-aviso p{
-margin:0px;
+.menu-aviso p {
+  margin: 0px;
 }
 .menu-aviso a {
-  color:white;
+  color: white;
   text-decoration: none;
 }
 .menu-aviso a:hover {
@@ -155,24 +176,29 @@ margin:0px;
   color: black;
 }
 
-
-
 @media only screen and (max-device-width: 480px),
   only screen and (min-device-width: 560px) and (max-device-width: 1136px) {
-  .banner img {
-    width: 100%;
+ 
+    .banner img {
+    width: 70%;
   }
   .menu__iconos-redes {
     background-color: var(--color-menu-redes);
     width: 50%;
+    padding:20px;
   }
   .menu__iconos-redes i {
     font-size: 40px;
     color: var(--color-iconos-redes);
   }
   .menu-aviso {
-    width: 80%;
-    font-size: 1.3em;
-    
+    padding:20px;
+    width: 50%;
+    font-size: 1rem;
+  }
+
+  header h1{
+    font-size:0.8rem;
+    margin-left: 4px;
   }
 }
