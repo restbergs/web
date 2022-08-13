@@ -1,6 +1,7 @@
 :root{
 --color-hover: white;
 --border-fantasma: rgb(234, 127, 127);
+--icono-size: 50px;
 }
 
 * {
@@ -10,6 +11,14 @@
 body {
   background-color:#ffff00;
 }
+
+.pageContainer{
+
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
 header{
   background-image: url(./assets/img/fondo-foto.jpg);
   background-attachment: fixed;
@@ -17,14 +26,20 @@ header{
   background-size: cover;
   background-repeat: no-repeat;
   height:100vh;
+  width:100%;
+}
 
+header img {
+  width:50%;
+  margin-top:4rem;
 }
-h1 {
-  text-align: center;
-}
+
+
 nav{
 margin-top:1em;
 border: solid var(--border-fantasma);
+display: flex;
+flex-direction: column;
 }
 ul {
   text-align: center;
@@ -35,6 +50,9 @@ li {
   margin: 10px;
 }
 
+ul li a i {
+  font-size: var(--icono-size);
+}
 
 .menu__iconos-redes {
   background-color: white;
@@ -71,14 +89,12 @@ text-decoration:none;
 }
 
 .banner {
-  text-align: center;
+  
   margin: auto;
-  display: block;
+  display: flex;
+  justify-content: center;
 }
-header img {
-  width:80%;
-  margin-top:4em;
-}
+
 
 
 .pantalla-2{
@@ -155,5 +171,9 @@ iframe:hover {
 }
 
 
+@media only screen and (max-device-width: 480px), only screen and (min-device-width: 560px) and (max-device-width: 1136px) {
+
+
+}
 
 
