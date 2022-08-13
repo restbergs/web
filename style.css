@@ -1,21 +1,32 @@
+/* PALETA: 
+#ded2fc
+#ded2fc
+ */
+
+
 :root{
---color-hover: white;
+--color-hover: #4ef14e;
 --border-fantasma: rgb(234, 127, 127);
 --icono-size: 50px;
+--color-menu-redes: #ffffff;
+--color-iconos-redes: #5d3ece;
 }
 
 * {
   margin: 0;
   padding: 0;
 }
+
 body {
   background-color:#ffff00;
 }
 
 .pageContainer{
-
+  
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 
 }
 
@@ -28,12 +39,17 @@ header{
   height:100vh;
   width:100%;
 }
+.banner {
+  border: solid var(--border-fantasma);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
 
 header img {
   width:50%;
   margin-top:4rem;
 }
-
 
 nav{
 margin-top:1em;
@@ -44,19 +60,15 @@ flex-direction: column;
 ul {
   text-align: center;
 }
-
 li {
   display: inline-block;
   margin: 10px;
 }
 
-ul li a i {
-  font-size: var(--icono-size);
-}
 
 .menu__iconos-redes {
-  background-color: white;
-  width: 40%;
+  background-color: var(--color-menu-redes);
+  width: 30%;
   padding:0.2em;
   margin:auto;
   border-radius:30px;
@@ -64,8 +76,14 @@ ul li a i {
   font-weight: bold;
   opacity: 80%;
 }
-.menu__iconos-redes a:hover{
-color:black;
+.menu__iconos-redes i {
+  font-size: var(--icono-size);
+  color: var(--color-iconos-redes);
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.menu__iconos-redes i:hover{
+color:var(--color-hover);
 text-decoration:none;
 }
 
@@ -87,14 +105,6 @@ text-decoration:none;
   color: var(--color-hover);
   text-decoration:none;
 }
-
-.banner {
-  
-  margin: auto;
-  display: flex;
-  justify-content: center;
-}
-
 
 
 .pantalla-2{
@@ -165,14 +175,29 @@ height: 100%;
   top: 50px; */
 }
 
-iframe:hover {
- *opacity: 20%;
- 
-}
 
 
 @media only screen and (max-device-width: 480px), only screen and (min-device-width: 560px) and (max-device-width: 1136px) {
-
+  header img {
+    width:100%;
+    margin-top:4rem;
+  }
+  .menu__iconos-redes i {
+    font-size: 40px;
+    color: var(--color-iconos-redes);
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .menu__iconos-redes {
+    background-color: var(--color-menu-redes);
+    width: 80%;
+    padding:0.2em;
+    margin:auto;
+    border-radius:30px;
+    font-size:1em;
+    font-weight: bold;
+    opacity: 80%;
+  }
 
 }
 
