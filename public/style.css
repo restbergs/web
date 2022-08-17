@@ -104,7 +104,7 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-
+  
   padding: 0.2em;
 
   border-radius: 30px;
@@ -179,17 +179,31 @@ li {
 @media only screen and (max-device-width: 480px),
   only screen and (min-device-width: 560px) and (max-device-width: 1136px) {
  
+   
+   .banner{
+    justify-content: flex-start;
+    
+   }
+   
     .banner img {
-    width: 70%;
+    width: 35%;
+    margin-top:10px;
+    margin-right:20px;
+    
   }
   .menu__iconos-redes {
     background-color: var(--color-menu-redes);
-    width: 50%;
+    width: 30%;
     padding:20px;
+    align-self: flex-start;
+    margin-left:20px;
   }
   .menu__iconos-redes i {
-    font-size: 40px;
+    font-size: 80px;
     color: var(--color-iconos-redes);
+    margin-top:5px;
+    margin-bottom:5px;
+   
   }
   .menu-aviso {
     padding:20px;
